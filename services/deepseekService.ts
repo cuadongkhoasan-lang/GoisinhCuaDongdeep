@@ -3,7 +3,7 @@ import { SYSTEM_PROMPT } from "../constants";
 
 // ⚠️ Dán API KEY của DeepSeek vào đây ↓
 // Ví dụ: const API_KEY = "sk-xxxx";
-const API_KEY = "sk-13b6c7aac96e480f968b1fd63f398eb0";
+const API_KEY = process.env.DEEPSEEK_API_KEY || "";
 
 if (!API_KEY) {
   throw new Error("API_KEY is not set. Please add your DeepSeek API key.");
